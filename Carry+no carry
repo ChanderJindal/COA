@@ -1,0 +1,15 @@
+;<Program title>
+
+jmp start
+
+;data
+
+;code
+start: nop
+mvi a, 10h ; first number 
+mvi b, 15h ; second number 
+sub b ; value to be subtracted 
+jnc skip ; in case of no carry jump to line 14 (here)
+inr c ; incase of carry add vaule of c a.k.a. carry
+skip: sta 103 ; storing the resultant value in accumulator at '103' memory location
+hlt
