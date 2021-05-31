@@ -1,0 +1,16 @@
+;<Program title>
+
+jmp start
+
+;data
+
+;code
+start: nop
+LDA 00H
+RRC
+RRC
+RRC
+RRC
+STA 01H
+
+hlt
