@@ -1,0 +1,29 @@
+;<Factorial>
+
+jmp start
+
+;data
+
+
+;code
+start: nop
+LXI H,00H        	
+MOV B,M            	
+MVI D,01H          	
+LOOP1: CALL FACT   	
+       DCR B       	
+       JNZ LOOP1   	
+INX H              	
+MOV M,D            	
+HLT                	
+FACT: MOV C,B      	
+      MVI A,00     	
+      LOOP2: ADD D 	
+             DCR C 	
+             JNZ LOOP2  
+      MOV D,A           
+      RET             
+
+lxi h, 01h ;
+mov b, m ;
+mov c,m ;
